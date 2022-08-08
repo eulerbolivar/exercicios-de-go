@@ -10,6 +10,7 @@ var contador int
 func main() {
     
     fmt.Scanf("%d", &valor)
+    fmt.Printf("%d\n", valor)
     
     if valor >= 100{
         contador = valor / 100
