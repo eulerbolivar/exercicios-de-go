@@ -5,13 +5,15 @@ import (
 )
 
 func main() {
-	slice := make([]int, 5, 10)
+	array := [5]int{}
 
-	for i := 0; i < 5; i++{
-		slice[i] = i
+	for i := 0; i < cap(array); i++{
+		array[i] = i
 	}
-	
-	fmt.Printf("a slice é formada por: %d\n", slice)
-	fmt.Printf("a slice tem tamanho de: %d\n", len(slice))
-	fmt.Printf("a slice tem capacidade de: %d\n", cap(slice))
+
+	for i, v := range array {
+		fmt.Printf("%d %d\n", i, v)
+	}
+
+	fmt.Printf("o tipo do array é: %T\n\n", array)
 }
