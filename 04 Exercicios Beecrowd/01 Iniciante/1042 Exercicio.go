@@ -3,23 +3,18 @@ package main
 import (
 	"fmt"
 )
-
+var num1, num2, num3 int
 var i, j int
 
 func main() {
 	
 	//CRIA O ARRAY COM A QUANTIDADE DE ELEMENTOS, E INPUTA ESSES NÚMEROS
-	numeros := [3]int{}
-	for i = 0; i < len(numeros); i++ {
-		fmt.Scanf("%d", &numeros[i])
-	}
+	numeros := []int{}
+	slice := []int{}
+	fmt.Scanf("%d %d %d", &num1, &num2, &num3)
 
-	//DÁ O OUTPUT COM OS 3 NÚMEROS ESCOLHIDOS
-	for i = 0; i < len(numeros); i++ {
-		fmt.Printf("%d\n", numeros[i])
-	}
-
-	fmt.Printf("\n")
+	numeros = append(numeros, num1, num2, num3)
+	slice = append(slice, numeros...)
 
 	//FAZ A REORGANIZAÇÃO BUBBLE SORT
 	for i = 0; i < len(numeros)-1; i++ {
@@ -35,4 +30,10 @@ func main() {
 		fmt.Printf("%d\n", numeros[i])
 	}
 
+	fmt.Printf("\n")
+
+	//DÁ O OUTPUT COM OS 3 NÚMEROS ESCOLHIDOS
+	for i = 0; i < len(slice); i++ {
+		fmt.Printf("%d\n", slice[i])
+	}
 }

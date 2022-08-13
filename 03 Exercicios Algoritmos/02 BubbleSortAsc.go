@@ -22,7 +22,7 @@ func main() {
 		for j = 0; j < len(numeros)-i-1; j++ {
 			if numeros[j] > numeros[j+1] {
 				numeros[j], numeros[j+1] = numeros[j+1], numeros[j]
-				fmt.Printf("%d = %d\n", j, numeros)
+				fmt.Printf("%d = %d\n", i, numeros)
 			}
 		}
 	}
