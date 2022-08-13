@@ -4,35 +4,32 @@ import (
 	"fmt"
 )
 
-var x, y, z, i, j int
+var i, j int
 
-func main(){
-	fmt.Scanf("%d %d %d", &x, &y, &z)
-
-	numeros:= []int{}
-	maior:= []int{}
-	numeros = append(numeros, x, y, z)
-
-	maior = numeros
-
-	for i = 0; i < len(numeros); i++{
-		for j = 0; j < len(numeros); j++{
-			if numeros[j] > maior[i]{
-				maior[i] = numeros[j]
-				maior[i+1] = numeros[j+1]
-			}
-		}
+func main() {
+	numeros := [3]int{}
+	for i = 0; i < len(numeros); i++ {
+		fmt.Scanf("%d", &numeros[i])
 	}
-	for i = 0; i < len(numeros); i++{
+
+	//DÁ O OUTPUT COM OS 3 NÚMEROS ESCOLHIDOS
+	for i = 0; i < len(numeros); i++ {
 		fmt.Printf("%d\n", numeros[i])
 	}
 
 	fmt.Printf("\n")
 
-	for i = 0; i < len(maior); i++{
-		fmt.Printf("%d\n", maior[i])
+	for i = 0; i < len(numeros)-1; i++ {
+		for j = 0; j < len(numeros)-i-1; j++ {
+			if numeros[j] > numeros[j+1] {
+				numeros[j], numeros[j+1] = numeros[j+1], numeros[j]
+			}
+		}
 	}
-	
-	
+
+	//DÁ O OUTPUT COM OS 3 NÚMEROS REORGANIZADOS
+	for i = 0; i < len(numeros); i++ {
+		fmt.Printf("%d\n", numeros[i])
+	}
 
 }
