@@ -4,21 +4,16 @@ import (
 	"fmt"
 )
 
-var i int
+var a, b, c float64
 
 func main(){
-	numeros := make([]int, 3)
+	fmt.Scanf("%f %f %f", &a, &b, &c)
 
-	fmt.Printf("o tamanho é: %d\n", len(numeros))
-	fmt.Printf("a capacidade é: %d\n\n", cap(numeros))
-
-	for i = 0; i < 3; i++{
-		fmt.Scanf("%d", &numeros[i])
+	if a + b > c && a + c > b && b + c > a{
+		perimetro := a + b + c
+		fmt.Printf("Perimetro = %.1f\n", perimetro)
+	} else{
+		area := ((a + b) * c) / 2
+		fmt.Printf("Area = %.1f\n", area)
 	}
-
-	//DÁ O OUTPUT COM OS 3 NÚMEROS ESCOLHIDOS
-	for i = 0; i < 3; i++ {
-		fmt.Printf("%d\n", numeros[i])
-	}
-
 }
