@@ -5,7 +5,8 @@ import (
 )
 
 var Hinicial, Minicial, Hfinal, Mfinal int
-var minutos, horas int
+var minutos int = 0
+var horas int = 0
 
 func main(){
 	fmt.Scanf("%d %d %d %d", &Hinicial, &Minicial, &Hfinal, &Mfinal)
@@ -14,7 +15,7 @@ func main(){
 
 	for i := 0; i < minutos; i++{
 		if i == 60{
-			horas++
+			horas += 1
 			minutos -= 60
 			i = 0
 		}
