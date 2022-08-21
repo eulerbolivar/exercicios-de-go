@@ -4,7 +4,13 @@ import (
 	"fmt"
 )
 
+var renda float64
+
 func main(){
-	fmt.Scanf()
+	fmt.Scanf("%f", &renda)
+
+	for i := 0; i < renda; i++{
+		if i 
+	}
 
 }
