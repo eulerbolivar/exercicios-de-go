@@ -1,10 +1,10 @@
 package main
+import "fmt"
 
-import (
-	"fmt"
-)
-
-func main(){
-	fmt.Scanf()
-
+func main() {
+    for i := 1; i <= 100; i++{
+        if ((i % 2) == 0){
+            fmt.Printf("%d\n", i)
+        }
+    }
 }
