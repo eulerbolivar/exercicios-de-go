@@ -1,7 +1,7 @@
 package main
 import "fmt"
 
-var quantia, coelhos, ratos, sapos, i int
+var quantia, coelhos, ratos, sapos int
 
 func SomaS(vetor[] int) int{
     var somado int
@@ -20,8 +20,14 @@ func main() {
     numeros := make([]int, quantia)
     tipo := make([]int, quantia)
     
-    for i = 0; i < quantia; i++{
-        fmt.Scanf("%d %c", &numeros[i], &tipo[i])
+    for i := 0; i < quantia; i++{
+        fmt.Scanf("%d", &numeros[i])
+        fmt.Scanf("%d", &tipo[i])
+        
+        //DEBUG
+        fmt.Printf("o número na posição %d tem: %d\n", i, numeros[i])
+        fmt.Printf("o tipo na posição %d tem: %c\n", i, tipo[i])
+
         if tipo[i] == 'C' || tipo[i] == 'c'{
             coelhos += numeros[i]
         }
@@ -47,8 +53,8 @@ func main() {
     PercentR = (float64(ratos) / float64(total)) * 100
     PercentS = (float64(sapos) / float64(total)) * 100
 
-    fmt.Printf("Percentual de coelhos: %.2f %\n", PercentC)
-    fmt.Printf("Percentual de ratos: %.2f %\n", PercentR)
-    fmt.Printf("Percentual de sapos: %.2f %\n", PercentS)
+    fmt.Printf("Percentual de coelhos: %.2f %%\n", PercentC)
+    fmt.Printf("Percentual de ratos: %.2f %%\n", PercentR)
+    fmt.Printf("Percentual de sapos: %.2f %%\n", PercentS)
 
 }
