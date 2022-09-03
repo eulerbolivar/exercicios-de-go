@@ -1,45 +1,39 @@
 package main
-import "fmt"
+
+import (
+	"fmt"
+)
 
 var quantia, coelhos, ratos, sapos int
-
-func SomaS(vetor[] int) int{
-    var somado int
-
-    for i := 0; i < quantia; i++{
-        somado += vetor[i]
-    }
-
-    return somado;
-}
+var total int
 
 func main() {
 
     fmt.Scanf("%d", &quantia)
     
-    numeros := make([]int, quantia)
-    tipo := make([]int, quantia)
+    var numeros int
+    var tipo rune
     
     for i := 0; i < quantia; i++{
-        fmt.Scanf("%d", &numeros[i])
-        fmt.Scanf("%d", &tipo[i])
-        
+        fmt.Scanf("%d", &numeros)
+        fmt.Scanf("%c", &tipo)
+
         //DEBUG
-        fmt.Printf("o número na posição %d tem: %d\n", i, numeros[i])
-        fmt.Printf("o tipo na posição %d tem: %c\n", i, tipo[i])
+        fmt.Printf("quantidade: %d\n", numeros)
+        fmt.Printf("animal: %c\n", tipo)
 
-        if tipo[i] == 'C' || tipo[i] == 'c'{
-            coelhos += numeros[i]
+        if tipo == 'C' || tipo == 'c'{
+            coelhos += numeros
         }
-        if tipo[i] == 'R' || tipo[i] == 'r'{
-            ratos += numeros[i]
+        if tipo == 'R' || tipo == 'r'{
+            ratos += numeros
         }
-        if tipo[i] == 'S' || tipo[i] == 's'{
-            sapos += numeros[i]
+        if tipo == 'S' || tipo == 's'{
+            sapos += numeros
         }
+        total += numeros
+        numeros = 0
     }
-
-    total := SomaS(numeros)
 
     fmt.Printf("Total: %d cobaias\n", total)
     fmt.Printf("Total de coelhos: %d\n", coelhos)
