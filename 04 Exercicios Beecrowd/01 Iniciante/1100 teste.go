@@ -19,5 +19,6 @@ func main() {
     total := SomaS(numeros)
     
     fmt.Printf("%d\n", total)
+    fmt.Printf("%s\n", len(string(total)))
 
 }

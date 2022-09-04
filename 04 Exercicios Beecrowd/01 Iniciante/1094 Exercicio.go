@@ -15,6 +15,7 @@ func main() {
     var tipo rune
     
     for i := 0; i < quantia; i++{
+        //COLETA A QUANTIDADE E O TIPO DE ANIMAL
         fmt.Scanf("%d", &numeros)
         fmt.Scanf("%c", &tipo)
 
@@ -22,6 +23,8 @@ func main() {
         fmt.Printf("quantidade: %d\n", numeros)
         fmt.Printf("animal: %c\n", tipo)
 
+
+        //FAZ A DISTRIBUIÇÃO DE TIPOS DE ANIMAIS
         if tipo == 'C' || tipo == 'c'{
             coelhos += numeros
         }
