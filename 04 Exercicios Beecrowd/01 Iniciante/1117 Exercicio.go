@@ -1,5 +1,8 @@
 package main
-import "fmt"
+
+import (
+    "fmt"
+)
 
 var nota, somado float64
 var contador int
