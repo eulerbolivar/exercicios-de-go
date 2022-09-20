@@ -6,6 +6,8 @@ import (
  
 func main() {
     var num int
+
+    //RECEBE O NÚMERO
     fmt.Scanf("%d", &num)
 
     for i := 1; i < num + 1; i++{
