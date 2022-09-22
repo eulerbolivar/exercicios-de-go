@@ -7,7 +7,7 @@ import (
 func main() {
     
     var num, qtd, PrimoAux int
-
+    //PERCORRE OS VALORES PARA IDENTIFICAR OS NÚMEROS PRIMOS
     fmt.Scanf("%d", &qtd)
     for i := 0; i < qtd; i++{
         fmt.Scanf("%d", &num)
