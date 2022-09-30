@@ -5,7 +5,6 @@ import(
 	"strconv"
 	"strings"
 )
-
 func minPartitions(n string) int {
 	var err error
 
@@ -22,15 +21,15 @@ func minPartitions(n string) int {
 		fmt.Printf("%d\n", err)
 	}
 
-	// AVALIA A QUANTIDADE DE DECI-BINARIOS SERÃO NECESSÁRIOS
-	var ans int
-
+	// EXPÕE TODOS OS DADOS ARMAZENADOS
+	fmt.Printf("aqui será mostrado digito por digito do slice\n")
 	for i := 0; i < len(texto); i++{
-		if separados[i] > ans{
-			ans = separados[i]
-			}
-		}
+		fmt.Printf("%d\n", separados[i])
+	}
 
+	fmt.Printf("o número é: %d e o tipo é: %T\n", separados, separados)
+	
+	ans := 5
 	return ans
 }
 
