@@ -6,7 +6,7 @@ import(
 
 func main(){
 
-	tam := 10
+	tam := 5
 	var aux int
 
 	slice := make([]int, tam)
@@ -22,9 +22,7 @@ func main(){
 				slice[j] = slice[j+1]
 				slice[j+1] = aux
 			}
+			fmt.Printf("%d = %d\n", i, slice)
 		}
 	}
-
-	fmt.Printf("nosso slice reorganizado ficou: %d\n", slice)
-
 }
