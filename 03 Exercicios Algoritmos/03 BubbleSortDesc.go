@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// DEFINE VARIÁVEIS DE CONTROLE
 var i, j int
 
 func main() {
