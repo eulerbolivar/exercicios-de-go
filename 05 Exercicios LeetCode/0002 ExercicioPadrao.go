@@ -4,9 +4,15 @@ import(
 	"fmt"
 )
 
+func teste()int{
+	ans := 5
+
+	return ans
+}
+
 func main(){
 
-	resp := 0 % 2
+	resp := teste()
 	fmt.Printf("%d\n", resp)
 
 }
