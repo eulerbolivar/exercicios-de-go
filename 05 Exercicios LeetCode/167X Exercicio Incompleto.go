@@ -5,8 +5,8 @@ import(
 )
 
 
-func valorTeste() [][]int {
-
+func maximumWealth(accounts [][]int) int {
+	var ans int = 5
     var inv int = 2
 
 	// SLICE OF SLICES CRIADO
@@ -33,7 +33,7 @@ func valorTeste() [][]int {
 	fmt.Printf("o vetor teste tem: %d\n", teste)
 	fmt.Printf("o tipo é %T o tamanho é: %d\n", teste, len(teste))
 
-	ans := teste
+	//ans := teste
 
 	return ans
 }
@@ -49,7 +49,7 @@ func main(){
 		matriz[i] = make([]int, tam)
 	}
 
-	test := valorTeste()
+	test := maximumWealth()
 
 	// VALORES ATRIBUÍDOS AOS SLICES
 	for i := 0; i < qtd; i++{
