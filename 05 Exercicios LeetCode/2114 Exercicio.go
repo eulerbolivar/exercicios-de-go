@@ -1,20 +1,29 @@
 package main
 
-import(
+import (
 	"fmt"
+	"strings"
 )
 
 // FUNÇÃO SOLICITADA PELO EXERCÍCIO
-func teste()int{
-	ans := 10
+func mostWordsFound(sentences []string) int {
 
-	return ans
+	controle := 0
+	for i := 0; i < len(sentences); i++{
+		splitSentences := strings.Split(sentences[i], " ")
+		if len(splitSentences) > controle{
+			controle = len(splitSentences)
+		}
+	}
+
+	return controle
 }
 
 // ENTRADA PADRÃO PARA O USO DA FUNÇÃO
 func main(){
 
-	resp := teste()
-	fmt.Printf("%d\n", resp)
+	sentences := []string{"alice and bob love leetcode", "i think so too", "this is great thanks very much"}
 
+	resp := mostWordsFound(sentences)
+	fmt.Printf("%d\n", resp)
 }
