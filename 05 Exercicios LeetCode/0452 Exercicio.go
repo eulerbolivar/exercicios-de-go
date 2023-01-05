@@ -1,20 +1,24 @@
 package main
 
-import(
+import (
 	"fmt"
 )
 
 // FUNÇÃO SOLICITADA PELO EXERCÍCIO
 func findMinArrowShots(points [][]int) int {
     
-	// [[10,16],[2,8],[1,6],[7,12]]
 	tam := len(points)
 	controle := make([][]int, tam)
-	c, t := 0, 0
+	c, t, teste := 0, 0, 0
 
 	// DESTRINCHAMENTO DA AMPLITUDE DOS SLICES EM OUTROS SLICES	
 	for i := 0; i < tam; i++{
-		t = (points[i][1] - points[i][0]) + 1
+		teste = points[i][1] - points[i][0]
+		if teste < 0{
+			t = (teste *-1) + 1
+		} else{
+			t = teste + 1
+		}
 		controle[i] = make([]int, t)
 		c = 0
 
@@ -24,24 +28,25 @@ func findMinArrowShots(points [][]int) int {
 			}
 			fmt.Printf("%d\n", controle)
 		}
-		//fmt.Printf("%d\n", len(controle[0]))
+
+	limite, estouro, ans := 0, 0, 0
 
 	// COMPARANDO SLICES PARA VER QUEM TEM NÚMERO REPETIDO
 	for i := 0; i < tam; i++{
 		for j := 0; j < len(controle[i]); j++{
-			for k := 0; k < len(controle[i]); k++{
-				for l := 0; l < len(controle[i]); l++{
-					if i != k{
+			for k := 0; k < tam; k++{
+				for l := 0; l < len(controle[k]); l++{
+					if i != k && limite != estouro{
 						if controle[i][j] == controle[k][l]{
-							fmt.Printf("o numero %d é igual a %d\n", controle[i][j], controle[k][l])
+							ans =+ 1
+							estouro = k
 						}
 					}
 				}
 			}
 		}
 	}
-		
-	ans := controle[0][0]
+
 	return ans
 }
 
