@@ -24,13 +24,18 @@ func findMinArrowShots(points [][]int) int {
 			}
 			fmt.Printf("%d\n", controle)
 		}
+		//fmt.Printf("%d\n", len(controle[0]))
 
 	// COMPARANDO SLICES PARA VER QUEM TEM NÚMERO REPETIDO
-	for i := 0; i < tam - 1; i++{
+	for i := 0; i < tam; i++{
 		for j := 0; j < len(controle[i]); j++{
-			for k := 0; k < len(controle[j]); k++{
-				if controle[i][j] == controle[i+1][k]{
-					
+			for k := 0; k < len(controle[i]); k++{
+				for l := 0; l < len(controle[i]); l++{
+					if i != k{
+						if controle[i][j] == controle[k][l]{
+							fmt.Printf("o numero %d é igual a %d\n", controle[i][j], controle[k][l])
+						}
+					}
 				}
 			}
 		}
