@@ -19,6 +19,8 @@ func findMinArrowShots(points [][]int) int {
 		} else{
 			t = teste + 1
 		}
+
+		// ESTICANDO OS VALORES DENTRO DO SLICE
 		controle[i] = make([]int, t)
 		c = 0
 
