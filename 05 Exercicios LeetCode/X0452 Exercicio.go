@@ -9,7 +9,7 @@ func findMinArrowShots(points [][]int) int {
     
 	tam := len(points)
 	controle := make([][]int, tam)
-	c, t, teste := 0, 0, 0
+	c, t, teste, ans := 0, 0, 0, 0
 
 	// DESTRINCHAMENTO DA AMPLITUDE DOS SLICES EM OUTROS SLICES	
 	for i := 0; i < tam; i++{
@@ -29,17 +29,14 @@ func findMinArrowShots(points [][]int) int {
 			fmt.Printf("%d\n", controle)
 		}
 
-	limite, estouro, ans := 0, 0, 0
-
 	// COMPARANDO SLICES PARA VER QUEM TEM NÚMERO REPETIDO
 	for i := 0; i < tam; i++{
 		for j := 0; j < len(controle[i]); j++{
 			for k := 0; k < tam; k++{
 				for l := 0; l < len(controle[k]); l++{
-					if i != k && limite != estouro{
+					if i != k{
 						if controle[i][j] == controle[k][l]{
-							ans =+ 1
-							estouro = k
+							ans += 1
 						}
 					}
 				}
