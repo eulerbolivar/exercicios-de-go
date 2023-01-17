@@ -19,17 +19,21 @@ func main() {
 		if (controle[i] % 2) == 0{
 			if j != 5{
 				vetor1[j] = controle[i]
-				fmt.Printf("par[%d] = %d\n", j, vetor1[j])
 				j++
 			} else {
+				for i := 0; i < len(vetor1); i++{
+					fmt.Printf("par[%d] = %d\n", i, vetor1[i])
+				}
 				j = 0
 			}
 		} else { 
 			if k != 5{
 			vetor2[k] = controle[i]
-			fmt.Printf("impar[%d] = %d\n", k, vetor2[k])
 			k++
 		} else {
+			for i := 0; i < len(vetor2); i++{
+				fmt.Printf("impar[%d] = %d\n", i, vetor2[i])
+			}
 			k = 0
 			}
 		}
