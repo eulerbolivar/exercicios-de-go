@@ -15,6 +15,7 @@ func main() {
 		fmt.Scanf("%d", &controle[i])
 	}
 
+	// CONTROLE DA QUANTIA MÁXIMA DE ENTRADAS
 	for i := 0; i < 15; i++{
 		if (controle[i] % 2) == 0{
 			if j != 5{
