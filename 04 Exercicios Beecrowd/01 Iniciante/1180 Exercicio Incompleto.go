@@ -13,4 +13,10 @@ func main(){
 	for i := 0; i < 10; i++{
 		vetor[i] = i
 	}
+
+	controle := 10
+	fmt.Printf("%d\n", controle)
+	for i := 0; i < 10; i++{
+		fmt.Printf("[%d] = %d\n", i, vetor[i])
+	}
 }
